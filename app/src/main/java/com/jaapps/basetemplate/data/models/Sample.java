@@ -3,6 +3,9 @@ package com.jaapps.basetemplate.data.models;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -11,7 +14,12 @@ import org.json.JSONObject;
  */
 public class Sample implements Parcelable {
 
+    @SerializedName("id")
+    @Expose
     private int id;
+
+    @SerializedName("title")
+    @Expose
     private String title;
 
     public Sample() {
